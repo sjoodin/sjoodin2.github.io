@@ -1,0 +1,256 @@
+.fab {
+   width: 70px;
+   height: 70px;
+   background-color: gray;
+   border-radius: 50%;
+   box-shadow: 0 6px 10px 0 #666;
+   transition: all 0.0s cubic-bezier(0.32, 0.36, 1, 1);
+   font-size: 50px;
+   color: white;
+   text-align: center;
+   line-height: 70px;
+   position: fixed;
+   right: 50px;
+   bottom: 50px;
+   cursor: grab;
+}
+
+iframe{
+    display: block;
+}
+ 
+.fab:hover {
+   box-shadow: 0 6px 14px 0 #666;
+}
+
+.fab.clicked{
+   color: rgba(255, 255, 255, 0);
+   background-color:#ff7b006b;
+   
+
+   /*width:40px;
+   height:40px;
+   box-shadow: 0 0px 0px 0 #666;
+
+   position: fixed;
+   right: 60px;
+   bottom: 60px;*/
+   
+   pointer-events: none;
+   touch-action: none;
+}
+
+.fab.back{
+   transition: all 0.2s ease-in-out;
+}
+
+.fab.hidden{
+    background-color:rgba(255, 255, 255, 0);
+}
+
+.overlay.visible{
+    position:fixed;
+    /*width:100%;
+    height:100%;*/
+    left:0px;
+    top:0px;
+    background-color:rgba(255, 255, 255, 100);
+
+}
+
+.menu.visible{
+    width: -webkit-fill-available;
+    max-width: 500px;
+    left:0px;
+    background-color: rgba(230, 179, 255, 0.0);
+    display: flex;
+}
+
+.menu{
+    width:0px;
+    position:fixed;
+    height:100%;
+    left:-70px;
+    top:0px;
+    width:0px;
+    font-family: Muli,sans-serif;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: x-small;
+    transition: all 0.1s cubic-bezier(0.22, 0.61, 0.36, 1);
+    /* overflow: hidden; */
+    display:none;
+}
+
+.sections{
+    /* background-color:Gray; */
+    height:100%;
+    /* display:inline-block; */
+}
+
+.section{
+    height: 12.5%;
+    max-height:200px;
+    background-color:#9e9e9e;
+    border-width:thin;
+    border-color:black;
+    cursor:grab;
+    text-align:center;
+    padding:0px 4px;
+    /* color: #993300; */
+}
+
+
+.section.bright{
+  background-color:lightgray;
+}
+
+.section:hover,.section.hovering{
+    background-color:#ff7b00;
+}
+
+.chapters{
+    background-color: gray;
+    height: 100%;
+    width: 0px;
+    display:none;
+    /* height: 480px; */
+    /* max-height: 812px; */
+    /* max-height: 483px; */
+    /* font-family: multi,sans-serif; */
+}
+
+.chapters.visible{
+    width: -webkit-fill-available;
+    display:inline-block;
+}
+
+
+.booktitle{
+
+height: 4vh;
+
+color: white;
+
+font-size: medium;
+
+padding-left: 10px;
+
+padding-top: 3px;
+}
+
+.chapter{
+    height: 29px;
+    border: 2px solid #ffffff00;
+    text-align: -webkit-center;
+    color: white;
+    font-size: initial;
+    background: darkgray;
+    min-width: 20px;
+    max-width: 20px;
+}
+
+
+.chapter:hover,.chapter.hovering{
+
+    background: #ff7b00;
+}
+
+table{
+    width: -webkit-fill-available;
+}
+
+/*iphone 4*/
+@media (min-device-height: 380px)
+    and (max-device-width : 320px)
+{
+    .chapter{
+        height: 6.1vh;
+    }
+}
+
+/*iphone 5*/
+@media (min-device-height: 568px)
+    and (max-device-width : 320px)
+{
+    .chapter{
+        height: 6.5vh;
+    }
+}
+
+
+
+/*iphone 6,7,8*/
+@media (min-device-height: 667px)
+and (max-device-width : 375px)
+{
+    .chapter{
+        height: 6.5vh;
+        max-width: unset;
+    }
+    .chapters.visible{
+        max-width: unset;
+    }
+}
+
+/*iphone 6,7,8 plus*/
+@media (min-device-height: 736px)
+and (max-device-width : 414px)
+{
+    .chapter{
+        height: 6.7vh;
+        max-width: unset;
+    }
+    .chapters.visible{
+        max-width: unset;
+    }
+}
+
+/*iphone 6,7,8 plus*/
+@media (min-device-height: 812px)
+and (max-device-width : 375px)
+{
+    .chapter{
+        height: 6.7vh;
+        max-width: unset;
+    }
+    .chapters.visible{
+        max-width: unset;
+    }
+}
+
+/*iphone X */
+@media (min-device-height: 1024px)
+and (max-device-width : 335px)
+{
+    .chapters.visible{
+        max-width: 225px;
+    }
+    .chapter{
+        max-width: unset;
+        height: 4.5vh;
+    }
+}
+
+/* laptop*/
+@media (min-device-height: 500px)
+and (min-device-width : 415px)
+{
+    .chapters.visible{
+        max-width: 225px;
+    }
+    .chapter{
+        max-width: unset;
+        height: 4.5vh;
+    }
+}
+
+.noselect{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
